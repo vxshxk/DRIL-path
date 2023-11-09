@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ARRAY_IMPL_H
+#define ARRAY_IMPL_H
 #include "array.h"
 #include<iostream>
 using namespace std;
@@ -61,3 +62,4 @@ void Array::operator=(BaseDataStructure &ds)
         array.push_back(i);
     }
 }
+#endif

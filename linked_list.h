@@ -1,12 +1,16 @@
-#ifndef ARRAY_H
-#define ARRAY_H
-#include "base.h"
-#include <vector>
+#ifndef LINKEDLIST_H
+#define LINKEDLIST_H
 
-class Array : public BaseDataStructure
-{
+#include "base.h"
+
+class LinkedList : public BaseDataStructure {
 private:
-    std::vector<int> array;
+    struct node {
+        int data;
+        node* link;
+    };
+
+    node* head=nullptr;
 
 public:
     void operator+=(int value) override;
@@ -17,4 +21,5 @@ public:
     void operator<<(int m) override;
     void operator=(BaseDataStructure &ds) override;
 };
+
 #endif
